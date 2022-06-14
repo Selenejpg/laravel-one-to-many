@@ -13,7 +13,10 @@
             <select name="category_id" id="category">
                 <option value="">Nessuna Categoria</option>
                 @foreach ($categories as $category)
-                    <option value="{{$category->id}}">{{$category->label}}</option>
+                    <option 
+                    @if (old('category_id') == $category->id) selected @endif
+                    value="{{$category->id}}"
+                    >{{$category->label}}</option>
                 @endforeach
             </select>
         </div>

@@ -50,7 +50,11 @@
                     <h2>Non ci sono post.</h2>
                 @endforelse
             </tbody>
-          </table>
+        </table>
+
+        {{-- @if($posts->hasPages())
+            {{$posts->links()}}
+        @endif --}}
     </div>
 
 @endsection
